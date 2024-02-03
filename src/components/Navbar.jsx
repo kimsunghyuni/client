@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/img/Logo.png'
 import React from 'react';
 import styled from '@emotion/styled';
+import { useLogout } from '../utils/LogOut';
 
 function Navbar() {
   return (
@@ -34,6 +35,19 @@ function Nav({ children }) {
     </div>
   )
 }
+
+function User() {
+  const logout = useLogout();
+
+  return (
+    <ul className="user-container">
+      <li
+        onClick={logout}>로그아웃
+      </li>
+    </ul>
+  )
+}
+
 
 const Header = styled.header`
 
@@ -102,12 +116,5 @@ const Header = styled.header`
 }
 `
 
-function User() {
-  return (
-    <ul className="user-container">
-      <button>로그아웃</button>
-    </ul>
-  )
-}
 
 export default Navbar;

@@ -43,11 +43,47 @@ ul li {
   list-style-type: none;
 }
 
+input {
+  width: 100%;
+  max-width: 500px;
+  height: 56px;
+  padding: 8px 24px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--Gray-20);
+
+}
+input::placeholder {
+  color: var(--Gray-40)
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--Gray-40);
+}
+
 .container-wrap {
   width: var(--site-width);
   margin: 0 auto;
   padding: 50px;
 }
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4{
+  font-size: 24px;
+}
+
 
 
 @font-face {
